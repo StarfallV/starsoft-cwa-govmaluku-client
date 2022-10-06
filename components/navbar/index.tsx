@@ -1,8 +1,8 @@
 import React from 'react'
-import { Transition } from "@headlessui/react"
 import { Link } from "react-scroll"
+import ModalLogin from '../modals/login'
 
-function Navbar() {
+function Navbar({ login } : any) {
     return (
         <>
             <nav className="shadow-sm fixed w-full z-10">
@@ -38,7 +38,8 @@ function Navbar() {
                                     </Link>                                                       
                                 </div> 
                                 <div className="ml-4 flex items-baseline space-x-10">                  
-                                    <button className="ml-5 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-500 hover:to-blue-500 hover:scale-105 text-white font-semibold py-2 px-10 rounded-full transition ease-in-out duration-300">
+                                    <button onClick={() => login(true)}
+                                    className="ml-5 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-500 hover:to-blue-500 hover:scale-105 text-white font-semibold py-2 px-10 rounded-full transition ease-in-out duration-300">
                                         Masuk
                                     </button>
                                 </div>          
